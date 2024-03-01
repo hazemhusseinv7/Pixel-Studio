@@ -1,0 +1,278 @@
+:root {
+  --color-option-one: #37474f;
+  --color-option-two: #f57c00;
+  --color-option-three: #e65100;
+  --color-option-four: #eceff1;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.main-btn {
+  color: var(--color-option-four);
+  background-color: var(--color-option-two);
+  padding: 0.5rem 1rem;
+}
+
+.main-btn:hover {
+  color: var(--color-option-one);
+  background-color: var(--color-option-three);
+}
+
+.main-title {
+  color: var(--color-option-one);
+}
+
+.main-title::after {
+  content: "";
+  width: 120px;
+  height: 2px;
+  background-color: var(--color-option-two);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Navbar Start */
+.navbar {
+  background-color: var(--color-option-one);
+}
+
+.navbar .navbar-brand {
+  color: var(--color-option-four);
+}
+
+.navbar .navbar-nav .nav-link {
+  color: var(--color-option-four);
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--color-option-two);
+}
+
+.navbar .search {
+  border-left: 1px solid var(--color-option-two);
+}
+
+.navbar .search svg {
+  color: var(--color-option-two);
+}
+
+.navbar .navbar-toggler {
+  color: var(--color-option-four);
+  font-size: 25px;
+  border-color: var(--color-option-four);
+}
+
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: #f57c00;
+}
+
+/* Navbar End */
+
+/* Landing start */
+.landing {
+  background-color: #37474f;
+  background-image: url(../imgs/background.png);
+  background-size: cover;
+  min-height: calc(100vh - 72px);
+}
+
+/* Landing End */
+
+/* Features Start */
+.features .icon-holder {
+  height: 200px;
+}
+
+.features .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.features .icon-holder .number {
+  font-size: 12rem;
+  color: var(--color-option-four);
+}
+
+.features .icon-holder .icon {
+  color: var(--color-option-two);
+}
+
+.features .feat h4 {
+  color: var(--color-option-one);
+}
+
+/* Features End */
+
+/* Our Work Start */
+.our-work {
+  background-color: var(--color-option-four);
+}
+
+.our-work ul .active {
+  background-color: var(--color-option-one);
+  color: var(--color-option-two);
+}
+
+.our-work ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.our-work ul li:not(.active):hover {
+  color: var(--color-option-two);
+}
+
+.our-work .box {
+  padding: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.our-work .box::before {
+  content: attr(data-work);
+  position: absolute;
+  background-color: rgb(245 124 0 / 90%);
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: var(--color-option-four);
+  transition: 0.3s;
+  font-size: 1.5rem;
+  transform: translateX(calc(-100% - 5px));
+}
+
+.our-work .box:hover::before {
+  transform: translateX(0);
+}
+
+/* Our Work End */
+
+/* About Start */
+.about .description {
+  max-width: 500px;
+}
+
+/* .about .image {
+    position: relative;
+} */
+
+.about .image {
+  position: relative;
+  bottom: -15px;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .about .image {
+    bottom: -40px;
+  }
+}
+
+/* About End */
+
+/* Team Start */
+.team {
+  background-color: var(--color-option-four);
+}
+
+.team h2 {
+  color: var(--color-option-two);
+}
+
+.team .box h4 {
+  color: var(--color-option-four);
+  background-color: var(--color-option-one);
+}
+
+/* Team End */
+
+/* Technologies Start */
+.tech img {
+  width: 70px;
+}
+
+/* Technologies End */
+
+/* Project Start */
+.project {
+  background-color: var(--color-option-one);
+}
+
+/* Project End */
+
+/* Subscribe Start */
+.subscribe {
+  background-color: var(--color-option-two);
+}
+
+.subscribe .email {
+  border: none;
+  border-bottom: 1px solid var(--color-option-four);
+}
+
+.subscribe .email:focus {
+  outline: none;
+}
+
+.subscribe ::placeholder {
+  color: var(--color-option-four);
+}
+
+.subscribe input[type="submit"] {
+  background-color: var(--color-option-one);
+  color: var(--color-option-two);
+}
+
+/* Subscribe End */
+
+/* Footer Start */
+footer {
+  color: var(--color-option-four);
+  background-color: var(--color-option-one);
+}
+
+footer {
+  color: var(--color-option-four);
+  background-color: var(--color-option-one);
+}
+
+footer .info .logo {
+  color: var(--color-option-four);
+  text-decoration: none;
+  display: block;
+}
+
+footer .contact ul svg {
+  width: 20px;
+  height: 20px;
+}
+
+footer .twitter {
+  background-color: #1da1f2;
+}
+
+footer .facebook {
+  background-color: #1877f2;
+}
+
+footer .youtube {
+  background-color: #ff0000;
+}
+
+footer .linkedin {
+  background-color: #0a66c2;
+}
+
+/* Footer End */
